@@ -27,8 +27,8 @@ const StyledFooter = styled.footer`
   justify-content: space-between;
   /* justify-items: center; */
   align-items: center;
-  padding-top: 4em;
-  padding-bottom: 4em;
+  padding-top: 2em;
+  padding-bottom: 2em;
 
   line-height: 24px;
   color: var(--main-font-color);
@@ -38,7 +38,7 @@ const StyledFooter = styled.footer`
 const StyledContactContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 1em;
+  /* padding-top: 1em; */
   padding-right: 0em;
   text-align: center;
 `;
@@ -125,7 +125,7 @@ const Styledp = styled.p`
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 36px;
+  font-size: 32px;
 
   @media (max-width: 768px) {
     font-weight: 400;
@@ -167,14 +167,14 @@ const Footer = React.forwardRef((props, ref) => (
     <StyledContactContainer>
      
       {/* <Styledp>VYME</Styledp> */}
-      <p>Part of the Ekman & Falck Group</p>
+      <p className="p_small" >Part of the Ekman & Falck Group</p>
       <StyledMailLink>
         <a href="mailto:peter@ekmanfalck.se">peter@ekmanfalck.se</a>
       </StyledMailLink>
       <StyledTelLink>
         <a href="tel:+46739908858">+46739908858</a>
       </StyledTelLink>
-       <StyledMicrop>Company reg. no. xxxxx xxxxx</StyledMicrop>
+       {/* <StyledMicrop>Company reg. no. xxxxx xxxxx</StyledMicrop> */}
       <StyledMicrop>Copyright 2025.</StyledMicrop>
     </StyledContactContainer>
 

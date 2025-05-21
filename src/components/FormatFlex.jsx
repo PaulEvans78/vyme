@@ -180,11 +180,10 @@ const TwoSplitCard = () => {
             <StyledCopyWrapper>
 
             <p>
-              As a customer, you’re in control, tell us about your brand's
-              direction, the model’s look, environment, and body type, no need
-              to ship product samples or plan shoots for weeks. With
-              AI-generated images, you get creative freedom, short lead times,
-              and complete flexibility. 
+              We offer full format flexibility. We generate images and videos in the size and type you need, 
+              whether it's for social media, campaigns, or product pages. The model can be placed in an environment and pose tailored to the format, 
+              ensuring every image fits perfectly and communicates effectively across all platforms.
+
             </p>
             </StyledCopyWrapper>
           </StyledCopy>

@@ -28,7 +28,7 @@ const Campaign = () => {
 
       <StyledImg
         src={BlackWhiteImage}
-        alt="A black & whote image of a woman sitting in an arm chair ina brutalist styled room with the ocean behind her."
+        alt="A black & white image of a woman sitting in an arm chair ina brutalist styled room with the ocean behind her."
       />
       
     </StyledContentsContainer>

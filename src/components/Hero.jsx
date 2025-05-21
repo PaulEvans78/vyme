@@ -7,6 +7,8 @@ const StyledContentsContainer = styled.section`
   align-items: flex-start;
   text-align: left;
   width: 100%;
+  background-color: #00000013;
+  
 
   /* @media (max-width: 960px) {
     flex-direction: column;
@@ -32,6 +34,7 @@ const StyledContents = styled.div`
   height: 100vh;
   overflow: hidden;
   text-align: center;
+  /* padding-bottom: 2em; */
 
   /* transform: translateX(-100%);
   animation: slideIn 1s ease-out forwards; */
@@ -60,7 +63,7 @@ const StyledTitle = styled.div`
   width: 100%;
   text-align: center;
   z-index: 2;
-  padding-top: 3em;
+  /* padding-top: 3em; */
 `;
 
 const StyledPitch = styled.div`
@@ -72,7 +75,7 @@ const StyledPitch = styled.div`
   /* font-size: 1.2rem; */
   overflow: hidden;
   text-align: center;
-  padding-top: 100px;
+  /* padding-top: 100px; */
 
   /* transform: translateX(-100%);
   animation: slideIn 1s ease-out forwards; */

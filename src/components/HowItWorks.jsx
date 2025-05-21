@@ -7,20 +7,19 @@ import Flat from "../assets/track_flat.png";
 // import Hair from "../assets/Hair.mp4";
 import styled from "styled-components";
 
-
 const StyledGridContainer = styled.div`
   position: relative;
   display: grid;
-  /* grid-template-columns: 1fr 1fr; */
+  grid-template-columns: 1fr 1fr;
   grid-template-areas: "wrapper carousel";
   width: 100%;
   /* min-height: 300px; */
-height: 828px;
+  height: 828px;
   background-color: #000000a9;
 `;
 
 const StyledWrapper = styled.div`
-grid-area: wrapper;
+  grid-area: wrapper;
   display: flex;
   width: 100%;
   /* max-width: 100%; */
@@ -30,9 +29,9 @@ grid-area: wrapper;
 `;
 
 const StyledCarouselWrapper = styled.div`
-grid-area: carousel;
-position: relative;
-top:0;
+  grid-area: carousel;
+  position: relative;
+  top: 0;
   width: 100%;
   max-width: 100%;
   /* aspect-ratio: 3 / 4; */
@@ -43,15 +42,17 @@ top:0;
   width: 100%;
   max-width: 100%;
   min-height: 300px;*/
-  overflow: hidden; 
+  overflow: hidden;
 `;
 
 const StyledContents = styled.div`
+  width: 100%;
   padding: 2em;
+  padding-bottom: 0em;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-end;
   text-align: left;
   z-index: 2;
 `;
@@ -62,27 +63,60 @@ const StyledTitle = styled.div`
   margin-top: 4em;
   margin-left: 7em;
   h2 span {
-    color: #E8BC8D; 
+    color: #e8bc8d;
   }
 `;
 
 const StyledCopyWrapper = styled.div`
-padding-top: 3em;
-padding-bottom: 3em;
+  padding-top: 3em;
+  padding-bottom: 3em;
 `;
 
 const StyledCopy = styled.div`
   position: relative;
-  max-width: 90%;
+  max-width: 100%;
   margin-left: 2em;
   margin-bottom: 2em;
+`;
+
+const StyledStepsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+`;
+
+const StyledStepNumber = styled.div`
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+`;
+
+const StyledStepsCopy = styled.div`
+  width: 100%;
+  /* height: 100px; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 2em;
 `;
 
 const StyledCarouselContent = styled.div`
   position: relative;
 
-width: 100%;
-height: 100%;
+  width: 100%;
+  height: 100%;
   /* aspect-ratio: 3 / 4; */
   overflow: hidden;
   display: flex;
@@ -108,7 +142,7 @@ const StyledVideo = styled.video`
   width: 100%;
   height: 100%;
   object-fit: cover;
-    /* aspect-ratio: 3 / 2; */
+  /* aspect-ratio: 3 / 2; */
 
   /* @media screen and (max-width: 1280px) {
     width: 250%;
@@ -171,57 +205,84 @@ const responsive = {
   },
 };
 
-
-
 const TwoSplitCard = () => {
   return (
     <StyledGridContainer>
       <StyledWrapper>
         <StyledContents>
           <StyledTitle>
-            <h2>How it <span>Works</span></h2>
+            <h2>
+              How it <span>Works</span>
+            </h2>
           </StyledTitle>
           <StyledCopy>
+            <StyledStepsContainer>
+              <StyledStepNumber>1</StyledStepNumber>
+              <StyledStepsCopy>
+                <p className="sub_title">Creative Kickoff</p>
+                <p className="p_small">
+                  We start with a collaborative session to align on your brand’s
+                  visual language, creative direction, and desired aesthetic.
+                </p>
+              </StyledStepsCopy>
+            </StyledStepsContainer>
 
-            <StyledCopyWrapper>
+                 <StyledStepsContainer>
+              <StyledStepNumber>2</StyledStepNumber>
+              <StyledStepsCopy>
+                <p className="sub_title">Product Upload</p>
+                <p className="p_small">
+                 Send us your product images, mannequins and/or flats. We handle the rest.
+                </p>
+              </StyledStepsCopy>
+            </StyledStepsContainer>
 
-            <ul>
-              <li>Lower visual production costs</li>
-              <li>Faster time to market</li>
-              <li>Higher conversion rates through relevant, personalised visuals</li>
-              <li>Improved ad performance with precisely targeted imagery</li>
-            </ul>
-            </StyledCopyWrapper>
+                 <StyledStepsContainer>
+              <StyledStepNumber>3</StyledStepNumber>
+              <StyledStepsCopy>
+                <p className="sub_title">AI Image Creation</p>
+                <p className="p_small">
+                 We generate high-fidelity visuals using state-of-the-art AI, ensuring exceptional product accuracy and editorial quality.
+                </p>
+              </StyledStepsCopy>
+            </StyledStepsContainer>
+
+                 <StyledStepsContainer>
+              <StyledStepNumber>4</StyledStepNumber>
+              <StyledStepsCopy>
+                <p className="sub_title">Delivery, Ready to Publish</p>
+                <p className="p_small">
+                  You receive final images and videos, tailored to your formats, ready for campaigns, e-commerce, or socials.
+                </p>
+              </StyledStepsCopy>
+            </StyledStepsContainer>
+
+         
           </StyledCopy>
         </StyledContents>
       </StyledWrapper>
 
       <StyledCarouselWrapper>
         <StyledCarousel responsive={responsive} infinite autoPlay arrows>
-  
-    <StyledFirstItem>
-      <StyledCarouselContent>
-        <StyledImg src={Flat} alt="Flat" />
-      </StyledCarouselContent>
-  </StyledFirstItem>
-   
-      <StyledCarouselContent>
-        <StyledImg src={Track1} alt="Track1" />
-      </StyledCarouselContent>
-   
-    
-      <StyledCarouselContent>
-        <StyledImg src={Track2} alt="Track2" />
-      </StyledCarouselContent>
-   
-  
-      <StyledCarouselContent>
-        <StyledVideo src={Track3} autoPlay loop muted playsInline />
-      </StyledCarouselContent>
-  
-  
-</StyledCarousel>
-       {/* <StyledWrapper>
+          <StyledFirstItem>
+            <StyledCarouselContent>
+              <StyledImg src={Flat} alt="Flat" />
+            </StyledCarouselContent>
+          </StyledFirstItem>
+
+          <StyledCarouselContent>
+            <StyledImg src={Track1} alt="Track1" />
+          </StyledCarouselContent>
+
+          <StyledCarouselContent>
+            <StyledImg src={Track2} alt="Track2" />
+          </StyledCarouselContent>
+
+          <StyledCarouselContent>
+            <StyledVideo src={Track3} autoPlay loop muted playsInline />
+          </StyledCarouselContent>
+        </StyledCarousel>
+        {/* <StyledWrapper>
         <StyledVideo src={Track3} autoPlay loop muted playsInline />
         </StyledWrapper> */}
       </StyledCarouselWrapper>

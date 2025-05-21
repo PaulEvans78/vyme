@@ -9,6 +9,7 @@ import Opacity from "../components/Opacity";
 import HowItWorks from "../components/HowItWorks";
 import ImageFullFrame from "../components/ImageFullFrame";
 import FormatFlex from "../components/FormatFlex";
+import Team from "../components/Team";
 import bg1 from "../assets/bg1.png";
 import bg2 from "../assets/bg2.png";
 import bg3 from "../assets/bg3.png";
@@ -46,7 +47,7 @@ const StyledHomeContainer = styled.section`
   flex-direction: column;
   align-self: center;
   align-content: center;
-  padding-top: 80px;
+  /* padding-top: 80px; */
 
   @media screen and (max-width: 960px) {
     padding-top: 80px;
@@ -122,6 +123,8 @@ const Home = () => {
         <ImageFullFrame />
         <FormatFlex />
         <Opacity />
+         <Team />
+          <Opacity />
       </StyledHomeContainer>
     </>
   );
