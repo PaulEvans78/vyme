@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { FaImdb, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import { Link } from "react-router-dom";
 
@@ -8,7 +8,7 @@ const footerData = [
 
   {
     id: 2,
-    href: "https://www.linkedin.com/in/paul-evans-3a74605/",
+    href: "https://www.linkedin.com/company/ekmanfalck/posts/?feedView=all",
     icon: <FaLinkedin />,
     des: "LinkedIn",
     target: "_blank",
@@ -25,7 +25,6 @@ const StyledFooter = styled.footer`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* justify-items: center; */
   align-items: center;
   padding-top: 2em;
   padding-bottom: 2em;
@@ -38,7 +37,6 @@ const StyledFooter = styled.footer`
 const StyledContactContainer = styled.div`
   display: flex;
   flex-direction: column;
-  /* padding-top: 1em; */
   padding-right: 0em;
   text-align: center;
 `;
@@ -46,7 +44,7 @@ const StyledContactContainer = styled.div`
 const StyledMailLink = styled.p`
   display: flex;
   flex-direction: column;
-  font-weight: 500;
+  font-weight: 300;
   margin-bottom: -0.5em;
 
   &:hover {
@@ -64,7 +62,7 @@ const StyledMailLink = styled.p`
 const StyledTelLink = styled.p`
   display: flex;
   flex-direction: column;
-  font-weight: 500;
+  font-weight: 300;
 
   &:hover {
     color: var(--main-button-hover-color);
@@ -118,11 +116,10 @@ const IconDes = styled.p`
 
 const StyledLogoContainer = styled.div`
   display: flex;
-  /* padding-left: 0.5em; */
 `;
 
 const Styledp = styled.p`
-  font-family: "Roboto", sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 32px;
@@ -133,6 +130,16 @@ const Styledp = styled.p`
   }
 `;
 
+const StyledpSmall = styled.p`
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  font-style: normal;
+  line-height: 1.6;
+  color: var(--main-font-color);
+  margin: 0em 0em 1em 0em;
+`;
+
 const StyledMicrop = styled.p`
   font-size: 12px;
   font-weight: 300;
@@ -141,7 +148,6 @@ const StyledMicrop = styled.p`
 
 const StyledIdent = styled.div`
   display: flex;
-  /* align-self: center; */
   width: 100%;
   height: 60px;
   margin-top: 0.75em;
@@ -166,15 +172,15 @@ const Footer = React.forwardRef((props, ref) => (
 
     <StyledContactContainer>
      
-      {/* <Styledp>VYME</Styledp> */}
-      <p className="p_small" >Part of the Ekman & Falck Group</p>
+      
+      <StyledpSmall>Part of the Ekman & Falck Group</StyledpSmall>
       <StyledMailLink>
-        <a href="mailto:peter@ekmanfalck.se">peter@ekmanfalck.se</a>
+        <a href="mailto:info@ekmanfalck.se">info@ekmanfalck.se</a>
       </StyledMailLink>
       <StyledTelLink>
         <a href="tel:+46739908858">+46739908858</a>
       </StyledTelLink>
-       {/* <StyledMicrop>Company reg. no. xxxxx xxxxx</StyledMicrop> */}
+ 
       <StyledMicrop>Copyright 2025.</StyledMicrop>
     </StyledContactContainer>
 

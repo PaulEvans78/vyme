@@ -1,7 +1,7 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Track1 from "../assets/flex1.png";
-import Track2 from "../assets/flex2.png";
+import Track1 from "../assets/flex1.jpg";
+import Track2 from "../assets/flex2.jpg";
 import Track3 from "../assets/flex3.mp4";
 // import Flat from "../assets/track_flat.png";
 // import Hair from "../assets/Hair.mp4";
@@ -16,16 +16,14 @@ const StyledGridContainer = styled.div`
   width: 100%;
   /* min-height: 300px; */
 height: 828px;
-  background-color: #000000a9;
+  background-color: var(--background-color-black);
 `;
 
 const StyledWrapper = styled.div`
 grid-area: wrapper;
   display: flex;
   width: 100%;
-  /* max-width: 100%; */
-  /* min-height: 300px; */
-  /* height: 100%; */
+  height: 800px; 
   overflow: hidden;
 `;
 
@@ -35,14 +33,6 @@ position: relative;
 top:0;
   width: 100%;
   max-width: 100%;
-  /* aspect-ratio: 3 / 4; */
-  /* margin: 0 auto; */
-  /* background-color: #000; */
-  /* padding: 2em 0; */
-  /* display: flex;
-  width: 100%;
-  max-width: 100%;
-  min-height: 300px;*/
   overflow: hidden; 
 `;
 
@@ -59,8 +49,8 @@ const StyledContents = styled.div`
 const StyledTitle = styled.div`
   position: absolute;
   top: 0;
-  margin-top: 4em;
-  margin-left: 7em;
+  margin-top: 6em;
+  margin-left: 2em;
   h2 span {
     color: #E8BC8D; 
   }
@@ -83,17 +73,10 @@ const StyledCarouselContent = styled.div`
 
 width: 100%;
 height: 100%;
-  /* aspect-ratio: 3 / 4; */
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* position: relative;
-  aspect-ratio: 3/2;
-  width: 100%;
-  max-width: 100%;
-  min-height: 300px;
-  overflow: hidden; */
 `;
 
 
@@ -102,7 +85,6 @@ const StyledVideo = styled.video`
   width: 100%;
   height: 100%;
   object-fit: cover;
-    /* aspect-ratio: 3 / 2; */
 
   /* @media screen and (max-width: 1280px) {
     width: 250%;
@@ -116,7 +98,6 @@ const StyledVideo = styled.video`
 const StyledImg = styled.img`
   width: 100%;
   height: 100%;
-  /* aspect-ratio: 3 / 2; */
   object-fit: cover;
 
   /* @media screen and (max-width: 1280px) {
@@ -196,12 +177,12 @@ const TwoSplitCard = () => {
 
    
       <StyledCarouselContent>
-        <StyledImg src={Track1} alt="Track1" />
+        <StyledImg src={Track1} alt="A young girl sits on her skateboard in a blue and white striped jump suit" />
       </StyledCarouselContent>
    
     
       <StyledCarouselContent>
-        <StyledImg src={Track2} alt="Track2" />
+        <StyledImg src={Track2} alt="A young girl stands on her skateboard in a blue and white striped jump suit" />
       </StyledCarouselContent>
    
   

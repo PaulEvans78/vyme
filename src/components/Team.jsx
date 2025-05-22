@@ -16,7 +16,7 @@ const StyledContentsContainer = styled.section`
   /* height: 828px; */
   padding-top: 4em;
   padding-bottom: 4em;
-  background-color: #000000a9;
+  background-color: var(--background-color-black);
 `;
 
 const StyledContents = styled.div`
@@ -78,11 +78,11 @@ const StyledTeamCopy = styled.div`
 
 const Campaign = () => {
   return (
-    <StyledContentsContainer>
+    <StyledContentsContainer id="team-section">
 
       <StyledContents>
 
-      <h3>Who Are We</h3>
+      <h3>The Team</h3>
 
       <p>We bring a unique mix of strategy, creativity, and innovation essential for an AI fashion service. 
         Peter Ekman, a former lawyer turned executive producer, brings precision and creative leadership from years of producing commercials globally. 

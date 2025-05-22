@@ -7,6 +7,7 @@ const StyledGridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 100%;
+  height: 800px;
 `;
 
 const StyledWrapper = styled.div`
@@ -14,37 +15,10 @@ position: relative;
   display: flex;
   width: 100%;
   max-width: 100%;
-  aspect-ratio: ${({ $aspectRatio }) => $aspectRatio};
+  /* aspect-ratio: ${({ $aspectRatio }) => $aspectRatio}; */
   overflow: hidden;
 `;
 
-// const Styledp = styled.p`
-//   font-size: 14px;
-//   color: white;
-//   font-weight: 500;
-//   opacity: 0;
-
-
-//   @media (max-width: 960px) {
-//     opacity: 1;
-//     transform: translateY(0);
-//   }
-// `;
-
-// const StyledCaseContents = styled.div`
-//   position: absolute;
-//   bottom: 4px;
-//   left: 16px;
-//   right: 16px;
-//   display: flex;
-//   align-items: flex-end;
-//   text-align: left;
-//   width: auto;
-//   height: auto;
-//   padding: 0;
-//   border-radius: 6px;
-//   z-index: 2;
-// `;
 
 
 
@@ -70,8 +44,6 @@ const StyledContents = styled.div`
 
   const StyledTitle = styled.div`
   margin: 0;
-  /* font-size: 2rem; */
-  /* font-weight: bold; */
 `;
 
 const StyledCopy = styled.div`
@@ -80,24 +52,7 @@ position: relative;
   
 `;
 
-// const StyledOpacity = styled.div`
-//   position: absolute;
-//   inset: 0;
-//   background: rgba(10, 10, 10, 0.4);
-//   opacity: 0;
-//   transition: opacity 0.3s ease;
-//   border-radius: 6px;
-//   z-index: 1;
 
-//   @media (max-width: 960px) {
-//     background: linear-gradient(
-//       to top,
-//       rgba(10, 10, 10, 0.6) 0%,
-//       transparent 30%
-//     );
-//     opacity: 1;
-//   }
-// `;
 
 
 
@@ -123,11 +78,7 @@ const TwoSplitCard = () => {
           </p>
         </StyledCopy>
         </StyledContents>
-            {/* <StyledOpacity>
-              <StyledCaseContents>
-                <Styledp>Ghost - Hunters Moon</Styledp>
-              </StyledCaseContents>
-            </StyledOpacity> */}
+      
           
         </StyledWrapper>
 

@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import ScrollButton from "./components/ScrollButton/ScrollButton";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
+// import Team from "./components/Team";
 import ScrollToTop from "./components/ScrollToTop";
 
 const GridContainer = styled.div`
@@ -34,8 +35,9 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
 
-            {/* <Route path="/about" element={<About />} /> */}
+            {/* <Route path="/team" element={<Team />} /> */}
           </Routes>
+
 
           <Footer ref={footerRef} />
         </MainContainer>

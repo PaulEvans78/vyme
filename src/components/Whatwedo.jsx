@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import Chevrondown from "../assets/FaChevronDown.svg";
 
-
-
 const StyledContentsContainer = styled.section`
   display: flex;
   flex-direction: row;
@@ -39,36 +37,22 @@ const StyledIntro = styled.div`
   text-align: center;
   padding-top: 50px;
   padding-bottom: 50px;
-  /* padding-left: 4em;
-  padding-right: 4em; */
 
-  transform: translateX(-100%);
-  animation: slideIn 1s ease-out forwards;
-
-  @media (max-width: 960px) {
+  /* @media (max-width: 960px) {
     align-items: center;
     min-height: 300px;
     padding: 0em 0em 1em 0em;
-  }
-
-  @keyframes slideIn {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
+  } */
 `;
 
-
-
-
-
-
-
+const StyledSpacing = styled.div`
+  position: relative;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 20px;
+  padding-bottom: 20px;
+`;
 
 const StyledIcon = styled.div`
   display: flex;
@@ -85,20 +69,23 @@ const Hero = () => {
     <StyledContentsContainer>
       <StyledIntro>
         <p>
-          We are an agency built by professionals from the fashion and advertising industries, each with over 20 years of experience across photography, film, fashion, e-commerce, and retouching. 
-          At our core, we believe you shouldn’t need to become an AI expert to benefit from AI. That’s why we blend AI with high-end art direction, making image production faster, smarter, and fully brand-aligned. 
-          No studio renting cost, no stylist, no travel cost, no weather days,  just bespoke model images
+          We are an agency built by professionals from the fashion and
+          advertising industries, each with over 20 years of experience across
+          photography, film, fashion, e-commerce, and retouching. At our core,
+          we believe you shouldn’t need to become an AI expert to benefit from
+          AI. That’s why we blend AI with high-end art direction, making image
+          production faster, smarter, and fully brand-aligned. No studio renting
+          cost, no stylist, no travel cost, no weather days,  just bespoke model
+          images
         </p>
-        <p>
-          Our Services
-        </p>
+        <StyledSpacing></StyledSpacing>
+        <p>Our Services</p>
         <StyledIcon>
-                    <StyledImg src={Chevrondown} alt="A arrow icon for next" />
-                  </StyledIcon>
+          <StyledImg src={Chevrondown} alt="A arrow icon for next" />
+        </StyledIcon>
       </StyledIntro>
     </StyledContentsContainer>
   );
 };
-
 
 export default Hero;

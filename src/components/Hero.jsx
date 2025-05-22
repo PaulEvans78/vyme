@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 const StyledContentsContainer = styled.section`
   display: flex;
   flex-direction: row;
@@ -8,7 +7,6 @@ const StyledContentsContainer = styled.section`
   text-align: left;
   width: 100%;
   background-color: #00000013;
-  
 
   /* @media (max-width: 960px) {
     flex-direction: column;
@@ -34,10 +32,6 @@ const StyledContents = styled.div`
   height: 100vh;
   overflow: hidden;
   text-align: center;
-  /* padding-bottom: 2em; */
-
-  /* transform: translateX(-100%);
-  animation: slideIn 1s ease-out forwards; */
 
   /* @media (max-width: 960px) {
     align-items: center;
@@ -51,11 +45,6 @@ const StyledContents = styled.div`
 `;
 
 const StyledTitle = styled.div`
-  /* position: absolute;
-  top: 35%;
-  left: 50%; */
-  /* transform: translate(-50%, -50%); */
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,7 +52,6 @@ const StyledTitle = styled.div`
   width: 100%;
   text-align: center;
   z-index: 2;
-  /* padding-top: 3em; */
 `;
 
 const StyledPitch = styled.div`
@@ -71,57 +59,22 @@ const StyledPitch = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* min-height: 400px; */
-  /* font-size: 1.2rem; */
   overflow: hidden;
   text-align: center;
-  /* padding-top: 100px; */
-
-  /* transform: translateX(-100%);
-  animation: slideIn 1s ease-out forwards; */
 
   /* @media (max-width: 960px) {
     align-items: center;
     min-height: 300px;
     padding: 0em 0em 1em 0em;
-  }
-
-  @keyframes slideIn {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
   } */
 `;
 
 const StyledCopy = styled.p``;
 
-
-
-// const StyledOverlay = styled.div`
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background: linear-gradient(
-//     to bottom,
-//     rgba(0, 0, 0, 0.4),
-//     rgba(0, 0, 0, 0.2)
-//   );
-//   z-index: 1;
-// `;
-
 const Hero = () => {
   return (
     <StyledContentsContainer>
       <StyledContents>
- 
-
         <StyledTitle className="pitch">
           <h1>VYME</h1>
         </StyledTitle>
@@ -130,12 +83,9 @@ const Hero = () => {
             Imagery designed to reflect your brand’s essence
           </StyledCopy>
         </StyledPitch>
-       
       </StyledContents>
     </StyledContentsContainer>
   );
 };
-
-
 
 export default Hero;

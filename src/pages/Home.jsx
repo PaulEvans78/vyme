@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Hero from "../components/Hero";
 import Whatwedo from "../components/Whatwedo";
 import Campaign from "../components/Campaign";
-import TwoSplit from "../components/Offers";
+import TwoSplit from "../components/Studio_SoMe";
 import WhatYouGain from "../components/WhatYouGain";
 import Opacity from "../components/Opacity";
 import HowItWorks from "../components/HowItWorks";
@@ -12,7 +12,7 @@ import FormatFlex from "../components/FormatFlex";
 import Team from "../components/Team";
 import bg1 from "../assets/bg1.png";
 import bg2 from "../assets/bg2.png";
-import bg3 from "../assets/bg3.png";
+import bg3 from "../assets/bg3.jpg";
 import videoBg from "../assets/bg4.mp4";
 
 const BackgroundWrapper = styled.div`
@@ -64,7 +64,7 @@ const StyledHomeContainer = styled.section`
 
 const backgroundMedia = [bg1, bg2, bg3, videoBg];
 
-const breakpoints = [0, 2000, 4000, 7000]; // Customize these scroll values to suit your layout
+const breakpoints = [0, 2500, 6000, 8700]; // Customize these scroll values to suit your layout
 
 const Home = () => {
   const [bgIndex, setBgIndex] = useState(0);
@@ -123,7 +123,8 @@ const Home = () => {
         <ImageFullFrame />
         <FormatFlex />
         <Opacity />
-         <Team />
+         <Team id="team-section" />
+         
           <Opacity />
       </StyledHomeContainer>
     </>

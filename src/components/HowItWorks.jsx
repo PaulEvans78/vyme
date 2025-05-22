@@ -4,7 +4,6 @@ import Track1 from "../assets/track1.jpg";
 import Track2 from "../assets/track2.jpg";
 import Track3 from "../assets/track3.mp4";
 import Flat from "../assets/track_flat.png";
-// import Hair from "../assets/Hair.mp4";
 import styled from "styled-components";
 
 const StyledGridContainer = styled.div`
@@ -13,18 +12,15 @@ const StyledGridContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "wrapper carousel";
   width: 100%;
-  /* min-height: 300px; */
+  height: 800px;
   height: 828px;
-  background-color: #000000a9;
+  background-color: var(--background-color-black);
 `;
 
 const StyledWrapper = styled.div`
   grid-area: wrapper;
   display: flex;
   width: 100%;
-  /* max-width: 100%; */
-  /* min-height: 300px; */
-  /* height: 100%; */
   overflow: hidden;
 `;
 
@@ -34,15 +30,8 @@ const StyledCarouselWrapper = styled.div`
   top: 0;
   width: 100%;
   max-width: 100%;
-  /* aspect-ratio: 3 / 4; */
-  /* margin: 0 auto; */
-  /* background-color: #000; */
-  /* padding: 2em 0; */
-  /* display: flex;
-  width: 100%;
-  max-width: 100%;
-  min-height: 300px;*/
   overflow: hidden;
+   background-color: #F4F3F0;
 `;
 
 const StyledContents = styled.div`
@@ -60,16 +49,11 @@ const StyledContents = styled.div`
 const StyledTitle = styled.div`
   position: absolute;
   top: 0;
-  margin-top: 4em;
-  margin-left: 7em;
+  margin-top: 6em;
+  margin-left: 2em;
   h2 span {
     color: #e8bc8d;
   }
-`;
-
-const StyledCopyWrapper = styled.div`
-  padding-top: 3em;
-  padding-bottom: 3em;
 `;
 
 const StyledCopy = styled.div`
@@ -82,7 +66,7 @@ const StyledCopy = styled.div`
 const StyledStepsContainer = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
 `;
 
@@ -104,7 +88,6 @@ const StyledStepNumber = styled.div`
 
 const StyledStepsCopy = styled.div`
   width: 100%;
-  /* height: 100px; */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -114,35 +97,23 @@ const StyledStepsCopy = styled.div`
 
 const StyledCarouselContent = styled.div`
   position: relative;
-
   width: 100%;
   height: 100%;
-  /* aspect-ratio: 3 / 4; */
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* position: relative;
-  aspect-ratio: 3/2;
-  width: 100%;
-  max-width: 100%;
-  min-height: 300px;
-  overflow: hidden; */
 `;
 
 const StyledFirstItem = styled.div`
-  width: 100%; // or whatever size you want
+  width: 100%;
   padding: 6em;
-
-  /* margin: 0 auto;  */
-  /* aspect-ratio: 3 / 2; */
 `;
 
 const StyledVideo = styled.video`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* aspect-ratio: 3 / 2; */
 
   /* @media screen and (max-width: 1280px) {
     width: 250%;
@@ -156,7 +127,6 @@ const StyledVideo = styled.video`
 const StyledImg = styled.img`
   width: 100%;
   height: 100%;
-  /* aspect-ratio: 3 / 2; */
   object-fit: cover;
 
   /* @media screen and (max-width: 1280px) {
@@ -227,37 +197,38 @@ const TwoSplitCard = () => {
               </StyledStepsCopy>
             </StyledStepsContainer>
 
-                 <StyledStepsContainer>
+            <StyledStepsContainer>
               <StyledStepNumber>2</StyledStepNumber>
               <StyledStepsCopy>
                 <p className="sub_title">Product Upload</p>
                 <p className="p_small">
-                 Send us your product images, mannequins and/or flats. We handle the rest.
+                  Send us your product images, mannequins and/or flats. We
+                  handle the rest.
                 </p>
               </StyledStepsCopy>
             </StyledStepsContainer>
 
-                 <StyledStepsContainer>
+            <StyledStepsContainer>
               <StyledStepNumber>3</StyledStepNumber>
               <StyledStepsCopy>
                 <p className="sub_title">AI Image Creation</p>
                 <p className="p_small">
-                 We generate high-fidelity visuals using state-of-the-art AI, ensuring exceptional product accuracy and editorial quality.
+                  We generate high-fidelity visuals using state-of-the-art AI,
+                  ensuring exceptional product accuracy and editorial quality.
                 </p>
               </StyledStepsCopy>
             </StyledStepsContainer>
 
-                 <StyledStepsContainer>
+            <StyledStepsContainer>
               <StyledStepNumber>4</StyledStepNumber>
               <StyledStepsCopy>
                 <p className="sub_title">Delivery, Ready to Publish</p>
                 <p className="p_small">
-                  You receive final images and videos, tailored to your formats, ready for campaigns, e-commerce, or socials.
+                  You receive final images and videos, tailored to your formats,
+                  ready for campaigns, e-commerce, or socials.
                 </p>
               </StyledStepsCopy>
             </StyledStepsContainer>
-
-         
           </StyledCopy>
         </StyledContents>
       </StyledWrapper>
@@ -282,9 +253,6 @@ const TwoSplitCard = () => {
             <StyledVideo src={Track3} autoPlay loop muted playsInline />
           </StyledCarouselContent>
         </StyledCarousel>
-        {/* <StyledWrapper>
-        <StyledVideo src={Track3} autoPlay loop muted playsInline />
-        </StyledWrapper> */}
       </StyledCarouselWrapper>
     </StyledGridContainer>
   );

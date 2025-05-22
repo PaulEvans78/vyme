@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaArrowCircleUp } from "react-icons/fa";
+import { FaChevronUp } from "react-icons/fa6";
 import { Button, StyledWrapper } from "./Styles";
 
 const ScrollButton = () => {
@@ -26,7 +26,7 @@ const ScrollButton = () => {
   return (
     <Button>
       <StyledWrapper>
-      <FaArrowCircleUp
+      <FaChevronUp
         onClick={scrollToTop}
         style={{ display: visible ? "inline" : "none",
           borderRadius: "50%"

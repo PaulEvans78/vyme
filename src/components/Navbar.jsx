@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Spin as Hamburger } from "hamburger-react";
 import { Link, useLocation } from "react-router-dom";
-// import logo from "/logoBely_large.png";
+import logo from "../assets/logoBely_large.png";
 
 const StyledNav = styled.nav`
   position: absolute;
@@ -39,64 +39,64 @@ const StyledNav = styled.nav`
   }
 `;
 
-// const StyledLogoContainer = styled.div`
-//   width: 300px;
-//   height: 100%;
+const StyledLogoContainer = styled.div`
+  width: 300px;
+  height: 100%;
 
-//   @media screen and (max-width: 478px) {
-//     width: 100px;
-//   }
-// `;
+  @media screen and (max-width: 478px) {
+    width: 100px;
+  }
+`;
 
-// const StyledImgContainer = styled.div`
-//   display: flex;
+const StyledImgContainer = styled.div`
+  display: flex;
 
-//   @media screen and (max-width: 960px) {
-//     width: 100%;
+  @media screen and (max-width: 960px) {
+    width: 100%;
 
-//     justify-content: center;
-//     margin-bottom: 4em;
-//   }
-// `;
+    justify-content: center;
+    margin-bottom: 4em;
+  }
+`;
 
-// const StyledIdent = styled.div`
-//   display: flex;
-//   width: 600px;
+const StyledIdent = styled.div`
+  display: flex;
+  width: 600px;
 
-//   text-align: left;
+  text-align: left;
 
-//   @media screen and (max-width: 767px) {
-//     padding-left: 0em;
-//   }
-// `;
+  @media screen and (max-width: 767px) {
+    padding-left: 0em;
+  }
+`;
 
-// const StyledNavLogo = styled.p`
-//   font-family: bely-display, sans-serif;
-//   font-weight: 400;
-//   font-style: normal;
-//   font-size: 48px;
-//   color: var(--main-font-color);
+const StyledNavLogo = styled.p`
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: Bold;
+  font-style: normal;
+  font-size: 32px;
+  color: var(--main-font-color);
+padding-top: 0.5em;
+  margin-top: 0em;
+  margin-bottom: 0;
 
-//   margin-top: 0em;
-//   margin-bottom: 0;
+  @media (max-width: 768px) {
+    font-size: 40px;
+    font-weight: 400;
+    -webkit-text-stroke: 0.3px;
+    margin-top: 0em;
+  }
+`;
 
-//   @media (max-width: 768px) {
-//     font-size: 40px;
-//     font-weight: 400;
-//     -webkit-text-stroke: 0.3px;
-//     margin-top: 0em;
-//   }
-// `;
+const StyledHamburgerPELogo = styled.img`
+  display: none;
 
-// const StyledHamburgerPELogo = styled.img`
-//   display: none;
-
-//   @media screen and (max-width: 960px) {
-//     display: flex;
-//     margin-top: 100px;
-//     width: 150px;
-//   }
-// `;
+  @media screen and (max-width: 960px) {
+    display: flex;
+    margin-top: 100px;
+    width: 150px;
+  }
+`;
 
 const StyledNavul = styled.ul`
   width: auto;
@@ -148,12 +148,10 @@ const StyledLink = styled(Link)`
   margin: 0em 2em 0em 0em;
 
   &:hover {
-    text-decoration: underline;
     font-weight: 700;
   }
 
   &.active {
-    text-decoration: underline;
     color: var(--main-navbar-active-color);
   }
 
@@ -246,6 +244,13 @@ const Navbar = ({ footerRef }) => {
     setHamburgerActive(false);
   };
 
+  const scrollToTeam = () => {
+  const section = document.getElementById('team-section');
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
   const handleLinkClick = () => {
     setOpen(false);
     setHamburgerActive(false);
@@ -253,13 +258,19 @@ const Navbar = ({ footerRef }) => {
 
   const links = [
     { id: 1, to: "/", text: "Home" },
-    { id: 2, to: "/about", text: "About" },
+    { id: 2, to: "/#", text: "Team", onClick: scrollToTeam },
     { id: 3, to: "#", text: "Contact", onClick: scrollToFooter },
   ];
 
   return (
     <StyledNav visible={visible}>
-  
+      <StyledLogoContainer>
+        <Link to="/" onClick={handleLinkClick}>
+          <StyledIdent>
+            <StyledNavLogo>VYME</StyledNavLogo>
+          </StyledIdent>
+        </Link>
+      </StyledLogoContainer>
 
       <StyledNavul open={open}>
         {links.map((link) =>
@@ -284,12 +295,12 @@ const Navbar = ({ footerRef }) => {
           )
         )}
 
-        {/* <StyledImgContainer>
+        <StyledImgContainer>
           <StyledHamburgerPELogo
             src={logo}
-            alt="A logo showing the initals PE for Paul Evans."
+            alt="A logo showing the letters VYME."
           />
-        </StyledImgContainer> */}
+        </StyledImgContainer>
       </StyledNavul>
 
       <StyledHamburger>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ManInSuit from "../assets/Campaign_highRes.jpg"
+import ManInSuit from "../assets/campaign.jpg"
 
 
 const StyledContentsContainer = styled.section`
@@ -42,9 +42,7 @@ const StyledContents = styled.div`
   align-items: flex-start;
   text-align: left;
   z-index: 2;
-
-  /* transform: translateX(-100%);
-  animation: slideIn 1s ease-out forwards; */
+  background: linear-gradient(to bottom, rgba(10, 10, 10, 0) 0%, rgba(10, 10, 10, 0.6) 150%);
 
   /* @media (max-width: 960px) {
     align-items: center;
@@ -59,8 +57,6 @@ const StyledContents = styled.div`
 
 const StyledTitle = styled.div`
   margin: 0;
-  /* font-size: 2rem; */
-  /* font-weight: bold; */
 `;
 
 const StyledCopy = styled.div`
