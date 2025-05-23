@@ -53,6 +53,15 @@ const StyledImgContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 960px) {
+    width: 100px;
+  height: 100px;
+  }
+
+  @media (max-width: 767px) {
+ 
+  }
 `;
 
 const StyledImg = styled.img`

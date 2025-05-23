@@ -15,7 +15,6 @@ position: relative;
   display: flex;
   width: 100%;
   max-width: 100%;
-  /* aspect-ratio: ${({ $aspectRatio }) => $aspectRatio}; */
   overflow: hidden;
 `;
 

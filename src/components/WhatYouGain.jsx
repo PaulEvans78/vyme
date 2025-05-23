@@ -8,6 +8,19 @@ const StyledGridContainer = styled.div`
   width: 100%;
   height: 800px;
   background-color: var(--background-color-black);
+
+  @media (max-width: 960px) {
+      height: 2000px;
+      grid-template-columns: 100%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "carousel" 
+  "wrapper";
+  }
+
+   @media (max-width: 767px) {
+  height: 1600px;
+  }
 `;
 
 const StyledWrapper = styled.div`
@@ -20,15 +33,8 @@ const StyledWrapper = styled.div`
 const StyledVideo = styled.video`
   width: 100%;
   object-fit: cover;
-
-  /* @media screen and (max-width: 1280px) {
-    width: 250%;
-  }
-
-  @media screen and (max-width: 767px) {
-    width: 320%;
-  } */
 `;
+
 const StyledContents = styled.div`
   padding: 2em;
   padding-bottom: 1em;
@@ -38,6 +44,19 @@ const StyledContents = styled.div`
   justify-content: flex-end;
   text-align: left;
   z-index: 2;
+
+    @media (max-width: 960px) {
+       justify-content: center;
+  }
+
+  @media (max-width: 767px) {
+ padding-left: 1em;
+ justify-content: flex-end;
+  }
+
+  @media screen and (max-width: 478px) {
+    padding-left: 0.5em;
+  }
 `;
 
 const StyledTitle = styled.div`
@@ -53,6 +72,7 @@ const StyledTitle = styled.div`
 const StyledCopyWrapper = styled.div`
   padding-top: 3em;
   padding-bottom: 3em;
+
 `;
 
 const StyledCopy = styled.div`

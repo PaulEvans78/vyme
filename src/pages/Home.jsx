@@ -47,24 +47,12 @@ const StyledHomeContainer = styled.section`
   flex-direction: column;
   align-self: center;
   align-content: center;
-  /* padding-top: 80px; */
 
-  @media screen and (max-width: 960px) {
-    padding-top: 80px;
-  }
-
-  @media screen and (max-width: 767px) {
-    padding-top: 0px;
-  }
-
-  @media screen and (max-width: 548px) {
-    padding-top: 20px;
-  }
 `;
 
 const backgroundMedia = [bg1, bg2, bg3, videoBg];
 
-const breakpoints = [0, 2500, 6000, 8700]; // Customize these scroll values to suit your layout
+const breakpoints = [0, 2500, 6000, 8700]; 
 
 const Home = () => {
   const [bgIndex, setBgIndex] = useState(0);
@@ -131,26 +119,5 @@ const Home = () => {
   );
 };
 
-
-
-// const Home = () => {
-//   return (
-//     <StyledHomeContainer>
-//       <Hero />
-
-    
-//         <Whatwedo />
-//         <Campaign />
-//         <TwoSplit />
-//         <WhatYouGain />
-//         <Opacity />
-//        <WhatYouGain />
-//        <ImageFullFrame />
-//        <WhatYouGain />
-//         <Opacity />
-
-//     </StyledHomeContainer>
-//   );
-// };
 
 export default Home;

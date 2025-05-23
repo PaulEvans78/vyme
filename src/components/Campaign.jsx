@@ -62,6 +62,10 @@ const StyledTitle = styled.div`
 const StyledCopy = styled.div`
 position: relative;
   max-width: 60%;
+
+  @media (max-width: 960px) {
+  max-width: 90%;
+  }
   
 `;
 

@@ -3,8 +3,6 @@ import "react-multi-carousel/lib/styles.css";
 import Track1 from "../assets/flex1.jpg";
 import Track2 from "../assets/flex2.jpg";
 import Track3 from "../assets/flex3.mp4";
-// import Flat from "../assets/track_flat.png";
-// import Hair from "../assets/Hair.mp4";
 import styled from "styled-components";
 
 
@@ -14,9 +12,21 @@ const StyledGridContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "wrapper carousel";
   width: 100%;
-  /* min-height: 300px; */
 height: 828px;
   background-color: var(--background-color-black);
+
+  @media (max-width: 960px) {
+      height: 2000px;
+      grid-template-columns: 100%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "wrapper" 
+  "carousel";
+  }
+
+ @media (max-width: 767px) {
+  height: 1600px;
+  }
 `;
 
 const StyledWrapper = styled.div`
@@ -44,6 +54,10 @@ const StyledContents = styled.div`
   justify-content: center;
   text-align: left;
   z-index: 2;
+
+    @media (max-width: 767px) {
+    padding: 0.5em;
+  }
 `;
 
 const StyledTitle = styled.div`

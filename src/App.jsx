@@ -5,13 +5,11 @@ import Home from "./pages/Home";
 import ScrollButton from "./components/ScrollButton/ScrollButton";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
-// import Team from "./components/Team";
 import ScrollToTop from "./components/ScrollToTop";
 
 const GridContainer = styled.div`
   min-height: 100%;
   max-width: 100vw;
-  /* background-color: black; */
 `;
 
 const MainContainer = styled.div`

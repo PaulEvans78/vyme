@@ -15,6 +15,19 @@ const StyledGridContainer = styled.div`
   height: 800px;
   height: 828px;
   background-color: var(--background-color-black);
+
+  @media (max-width: 960px) {
+      height: 2000px;
+      grid-template-columns: 100%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "wrapper" 
+  "carousel";
+  }
+
+  @media (max-width: 767px) {
+  height: 1600px;
+  }
 `;
 
 const StyledWrapper = styled.div`
@@ -44,6 +57,16 @@ const StyledContents = styled.div`
   justify-content: flex-end;
   text-align: left;
   z-index: 2;
+
+   @media (max-width: 960px) {
+       justify-content: center;
+  }
+
+  @media (max-width: 767px) {
+    justify-content: flex-end;
+    padding: 0.5em;
+    padding-bottom: 2em;
+  }
 `;
 
 const StyledTitle = styled.div`
@@ -61,6 +84,15 @@ const StyledCopy = styled.div`
   max-width: 100%;
   margin-left: 2em;
   margin-bottom: 2em;
+
+  @media (max-width: 960px) {
+    margin-top: 4em;
+       margin-bottom: 0em;
+  }
+
+  @media (max-width: 767px) {
+ 
+  }
 `;
 
 const StyledStepsContainer = styled.div`
@@ -108,6 +140,14 @@ const StyledCarouselContent = styled.div`
 const StyledFirstItem = styled.div`
   width: 100%;
   padding: 6em;
+
+  @media screen and (max-width: 767px) {
+    padding: 2em;
+  }
+
+  @media screen and (max-width: 478px) {
+     padding: 6em;
+  }
 `;
 
 const StyledVideo = styled.video`

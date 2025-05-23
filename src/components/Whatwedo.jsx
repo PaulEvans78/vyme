@@ -38,11 +38,10 @@ const StyledIntro = styled.div`
   padding-top: 50px;
   padding-bottom: 50px;
 
-  /* @media (max-width: 960px) {
-    align-items: center;
-    min-height: 300px;
-    padding: 0em 0em 1em 0em;
-  } */
+  @media (max-width: 960px) {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
 `;
 
 const StyledSpacing = styled.div`

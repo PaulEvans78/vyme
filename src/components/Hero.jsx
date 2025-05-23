@@ -7,20 +7,6 @@ const StyledContentsContainer = styled.section`
   text-align: left;
   width: 100%;
   background-color: #00000013;
-
-  /* @media (max-width: 960px) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  @media (max-width: 767px) {
-    padding: 6em 0em 0.5em 0em;
-  }
-
-  @media (max-width: 548px) {
-    padding: 4em 0em 0.5em 0em;
-  } */
 `;
 
 const StyledContents = styled.div`
@@ -33,15 +19,13 @@ const StyledContents = styled.div`
   overflow: hidden;
   text-align: center;
 
-  /* @media (max-width: 960px) {
-    align-items: center;
-
-    padding: 0em 0em 1em 0em;
+  @media (max-width: 960px) {
+  padding-bottom: 4em;
   }
 
   @media (max-width: 767px) {
-    aspect-ratio: 3/5;
-  } */
+ 
+  }
 `;
 
 const StyledTitle = styled.div`
@@ -52,6 +36,8 @@ const StyledTitle = styled.div`
   width: 100%;
   text-align: center;
   z-index: 2;
+
+
 `;
 
 const StyledPitch = styled.div`
@@ -62,11 +48,15 @@ const StyledPitch = styled.div`
   overflow: hidden;
   text-align: center;
 
-  /* @media (max-width: 960px) {
-    align-items: center;
-    min-height: 300px;
-    padding: 0em 0em 1em 0em;
-  } */
+  @media (max-width: 960px) {
+  padding-left:1em;
+  padding-right:1em;
+  }
+
+  @media (max-width: 767px) {
+ padding-left:2em;
+  padding-right:2em;
+  }
 `;
 
 const StyledCopy = styled.p``;

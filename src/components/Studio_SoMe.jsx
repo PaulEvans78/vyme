@@ -15,6 +15,19 @@ const StyledGridContainer = styled.div`
   width: 100%;
   height: 800px;
   background-color: var(--background-color-black);
+
+    @media (max-width: 960px) {
+      height: 2000px;
+      grid-template-columns: 100%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "carousel" 
+  "wrapper";
+  }
+
+  @media (max-width: 767px) {
+ 
+  }
 `;
 
 const StyledWrapper = styled.div`
