@@ -173,9 +173,9 @@ const Footer = React.forwardRef((props, ref) => (
     <StyledContactContainer>
      
       
-      <StyledpSmall>Part of the Ekman & Falck Group</StyledpSmall>
+      <StyledpSmall>Part of the EF Group</StyledpSmall>
       <StyledMailLink>
-        <a href="mailto:info@ekmanfalck.se">info@ekmanfalck.se</a>
+        <a href="mailto:hello@ekmanfalck.se">hello@ekmanfalck.se</a>
       </StyledMailLink>
       <StyledTelLink>
         <a href="tel:+46739908858">+46739908858</a>

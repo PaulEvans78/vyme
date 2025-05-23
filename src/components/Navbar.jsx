@@ -48,16 +48,16 @@ const StyledLogoContainer = styled.div`
   }
 `;
 
-const StyledImgContainer = styled.div`
-  display: flex;
+// const StyledImgContainer = styled.div`
+//   display: flex;
 
-  @media screen and (max-width: 960px) {
-    width: 100%;
+//   @media screen and (max-width: 960px) {
+//     width: 100%;
 
-    justify-content: center;
-    margin-bottom: 4em;
-  }
-`;
+//     justify-content: center;
+//     margin-bottom: 4em;
+//   }
+// `;
 
 const StyledIdent = styled.div`
   display: flex;
@@ -88,15 +88,15 @@ padding-top: 0.5em;
   }
 `;
 
-const StyledHamburgerPELogo = styled.img`
-  display: none;
+// const StyledHamburgerPELogo = styled.img`
+//   display: none;
 
-  @media screen and (max-width: 960px) {
-    display: flex;
-    margin-top: 100px;
-    width: 150px;
-  }
-`;
+//   @media screen and (max-width: 960px) {
+//     display: flex;
+//     margin-top: 100px;
+//     width: 150px;
+//   }
+// `;
 
 const StyledNavul = styled.ul`
   width: auto;
@@ -125,6 +125,7 @@ const StyledNavul = styled.ul`
     margin-left: 0em;
     padding-right: 0em;
     padding-inline-start: 0px;
+    background-color: var(--background-color-black);
   }
 
   @media screen and (max-width: 960px) {
@@ -210,7 +211,7 @@ const StyledHamburger = styled.div`
   }
 
   @media screen and (max-width: 767px) {
-    margin-top: 0.65em;
+    margin-top: 1.5em;
   }
 `;
 
@@ -295,12 +296,12 @@ const Navbar = ({ footerRef }) => {
           )
         )}
 
-        <StyledImgContainer>
+        {/* <StyledImgContainer>
           <StyledHamburgerPELogo
             src={logo}
             alt="A logo showing the letters VYME."
           />
-        </StyledImgContainer>
+        </StyledImgContainer> */}
       </StyledNavul>
 
       <StyledHamburger>

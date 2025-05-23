@@ -10,7 +10,7 @@ import HowItWorks from "../components/HowItWorks";
 import ImageFullFrame from "../components/ImageFullFrame";
 import FormatFlex from "../components/FormatFlex";
 import Team from "../components/Team";
-import bg1 from "../assets/bg1.png";
+import bg1 from "../assets/bg1.jpg";
 import bg2 from "../assets/bg2.png";
 import bg3 from "../assets/bg3.jpg";
 import videoBg from "../assets/bg4.mp4";

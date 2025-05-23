@@ -36,7 +36,11 @@ const StyledTitle = styled.div`
   width: 100%;
   text-align: center;
   z-index: 2;
+  padding-top: 2em;
 
+  @media (max-width: 960px) {
+  padding-top: 8em;
+  }
 
 `;
 
@@ -59,13 +63,15 @@ const StyledPitch = styled.div`
   }
 `;
 
-const StyledCopy = styled.p``;
+const StyledCopy = styled.p`
+color: var(--secondary-font-color);
+`;
 
 const Hero = () => {
   return (
     <StyledContentsContainer>
       <StyledContents>
-        <StyledTitle className="pitch">
+        <StyledTitle>
           <h1>VYME</h1>
         </StyledTitle>
         <StyledPitch>

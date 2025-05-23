@@ -89,13 +89,16 @@ const StyledImg = styled.img`
   height: 100%;
   object-fit: cover;
 
-  /* @media screen and (max-width: 1280px) {
-    width: 250%;
-  }
 
-  @media screen and (max-width: 767px) {
-    width: 320%;
-  } */
+   @media screen and (min-width: 1440px) {
+    object-fit: contain;
+  }
+`;
+
+const StyledSoMeImg = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
 
 const StyledCarousel = styled(Carousel)`
@@ -176,7 +179,7 @@ const TwoSplitCard = () => {
       </StyledCarouselWrapper>
 
        <StyledWrapper>
-                  <StyledImg
+                  <StyledSoMeImg
                     src={SoMe}
                     alt="a young woman in a red balloon skirt and a green and white rugby shirt crossing a road carrying flowers.."
                   />
